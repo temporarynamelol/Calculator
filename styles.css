@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
-    height: 425px;
+    height: 525px;
     width: 350px;
 
 }
@@ -30,4 +30,16 @@ body {
 
 .topRow button {
     padding: 25px 65px 25px 65px;
+}
+
+.screenRow {
+    display: flex;
+    justify-content: center;
+}
+.screen {
+    height: 80px;
+    width: 350px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 12px;
 }
