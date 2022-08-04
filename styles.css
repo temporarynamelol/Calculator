@@ -5,6 +5,7 @@ body {
 }
 
 .calcBody {
+    padding: 15px;
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
@@ -42,4 +43,10 @@ body {
     border-style: solid;
     border-color: black;
     border-radius: 12px;
+}
+
+.calcOutline {
+    border: black;
+    border-radius: 12px;
+    border-style: solid;
 }
