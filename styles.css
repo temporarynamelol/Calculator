@@ -20,6 +20,14 @@ body {
 }
 
 .row button {
-    padding: 32px;
+    padding: 25px 35px;
+}
 
+.topRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.topRow button {
+    padding: 25px 65px 25px 65px;
 }
