@@ -26,7 +26,7 @@ function operate (first, operator, second) {
         result = subtract(first, second);
     } else if (operator == '/') {
         result = divide(first, second);
-    } else if (operator == '*') {
+    } else if (operator == 'x') {
         result = multiply(first, second);
     }
 
@@ -37,20 +37,36 @@ const display = document.querySelector('.screenVal');
 
 const buttons = document.querySelectorAll('button');
 
+let value1 = '';
+let value2 = '';
+let symbol = '';
+let final = ''
+
 buttons.forEach((button) => {
+
+  
+    let value = button.innerText.toLowerCase();
+
     button.addEventListener('click', () => {
-        let symbol = '';
-        let value = button.innerText.toLowerCase();
         if (value == 'clear') {
             display.textContent = '';
+            value1 = '';
         } else if (value == 'x' || value == '+' || value == '-' || value == '/') {
             symbol = value;
-            console.log(symbol);
+            value2 = value1;
+            //console.log("Val 2 = " + value2);
+            value1 = '';
             display.textContent = '';
+        } else if (value == '=') {
+            display.textContent = '';
+            final = operate(Number(value2), symbol, Number(value1));
+            display.textContent = final;
+            value1 = final;
         }
         else { 
-            //console.log(value);
             display.textContent += value;
+            value1 += value;
+            //console.log("Val 1 is " + value1);
         }
 
     })
