@@ -3,3 +3,23 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
+.calcBody {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    height: 425px;
+    width: 350px;
+
+}
+
+.row {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.row button {
+    padding: 32px;
+
+}
