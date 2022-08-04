@@ -37,37 +37,41 @@ const display = document.querySelector('.screenVal');
 
 const buttons = document.querySelectorAll('button');
 
+let userIn = [];
 let value1 = '';
-let value2 = '';
-let symbol = '';
-let final = ''
+let operator = '';
+let result = '';
+//let workOut = false;
 
 buttons.forEach((button) => {
-
-  
-    let value = button.innerText.toLowerCase();
-
     button.addEventListener('click', () => {
-        if (value == 'clear') {
-            display.textContent = '';
+        let value = button.innerText;
+        if (value == 'x' || value == '/' || value == '+' || value == '-' || value == '=') {
+            
+            userIn.push(value1);
             value1 = '';
-        } else if (value == 'x' || value == '+' || value == '-' || value == '/') {
-            symbol = value;
-            value2 = value1;
-            //console.log("Val 2 = " + value2);
-            value1 = '';
-            display.textContent = '';
-        } else if (value == '=') {
-            display.textContent = '';
-            final = operate(Number(value2), symbol, Number(value1));
-            display.textContent = final;
-            value1 = final;
-        }
-        else { 
-            display.textContent += value;
+            //display.textContent = '';
+
+            if (!(operator == '')) {
+                result = operate(Number(userIn[userIn.length - 2]), operator, Number(userIn[userIn.length - 1]));
+                userIn.push(result);
+                display.textContent = result;
+            }
+
+            operator = value;
+            
+        } else if (value / value == 1 || value == 0 || value == '.') {
             value1 += value;
-            //console.log("Val 1 is " + value1);
+            display.textContent = value1;
+        } else if (value == 'clear') {
+            value = result = operator = '';
+            userIn = [];
+            display.textContent = '';
+        } else if (value == 'Delete') {
+            value1 = value1.slice(0, -1);
+            display.textContent = value1;
         }
 
     })
+  
 })
