@@ -43,6 +43,14 @@ body {
     border-style: solid;
     border-color: black;
     border-radius: 12px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.screenVal {
+    margin: 8px;
+    font-size: 32px;
 }
 
 .calcOutline {
