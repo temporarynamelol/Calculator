@@ -64,7 +64,7 @@ buttons.forEach((button) => {
             value1 += value;
             display.textContent = value1;
         } else if (value == 'clear') {
-            value = result = operator = '';
+            value1 = value = result = operator = '';
             userIn = [];
             display.textContent = '';
         } else if (value == 'Delete') {
