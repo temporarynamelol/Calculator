@@ -54,7 +54,7 @@ buttons.forEach((button) => {
             }
 
             if (!(operator == '')) {
-                result = operate(Number(userIn[userIn.length - 2]), operator, Number(userIn[userIn.length - 1]));
+                result = operate(Number(userIn[userIn.length - 2]), operator, Number(userIn[userIn.length - 1])).toFixed(3);
                 if (result != 0) {
                     userIn.push(result);
                     display.textContent = result;
