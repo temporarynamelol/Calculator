@@ -1,3 +1,5 @@
+let errorMsg = "D1V1S10N 3RR0R"
+
 function add (first, second) {
     result = first + second;
     return result;
@@ -9,8 +11,12 @@ function subtract (first, second) {
 }
 
 function divide (first, second) {
-    result = first / second;
-    return result;
+    if (first == 0 || second == 0) {
+        return errorMsg;
+    } else {
+        result = first / second;
+        return result;
+    }
 }
 
 function multiply (first, second) {
@@ -19,6 +25,7 @@ function multiply (first, second) {
 }
 
 function operate (first, operator, second) {
+
     let result = 0;
     if (operator == '+') {
         result = add(first, second);
@@ -30,7 +37,12 @@ function operate (first, operator, second) {
         result = multiply(first, second);
     }
 
-    return result;
+    if (result % 1 == 0 ||result == errorMsg) {
+        return result;
+    } else {
+        return result.toFixed(3);
+    }
+    
 }
 
 const display = document.querySelector('.screenVal');
@@ -54,7 +66,7 @@ buttons.forEach((button) => {
             }
 
             if (!(operator == '')) {
-                result = operate(Number(userIn[userIn.length - 2]), operator, Number(userIn[userIn.length - 1])).toFixed(3);
+                result = operate(Number(userIn[userIn.length - 2]), operator, Number(userIn[userIn.length - 1]));
                 if (result != 0) {
                     userIn.push(result);
                     display.textContent = result;
