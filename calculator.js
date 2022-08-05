@@ -48,15 +48,20 @@ buttons.forEach((button) => {
         let value = button.innerText;
         if (value == 'x' || value == '/' || value == '+' || value == '-' || value == '=') {
             
-            userIn.push(value1);
-            value1 = '';
-            //display.textContent = '';
+            if (value1 != 0 || value1 != '') {
+                userIn.push(value1);
+                value1 = '';
+            }
 
             if (!(operator == '')) {
                 result = operate(Number(userIn[userIn.length - 2]), operator, Number(userIn[userIn.length - 1]));
-                userIn.push(result);
-                display.textContent = result;
-            }
+                if (result != 0) {
+                    userIn.push(result);
+                    display.textContent = result;
+                }
+                
+
+            } 
 
             operator = value;
             
