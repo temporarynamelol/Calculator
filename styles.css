@@ -11,15 +11,18 @@ body {
 .head {
     font-family: 'FredokaOne';
     font-size: 120px;
+    margin: 20px;
 }
 
 .calcBody {
+    border-radius: 15px;
     padding: 20px;
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
     height: 545px;
     width: 350px;
+    background-color: #63bda4;
 
 }
 
@@ -55,6 +58,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    background-color: #d9ffea;
 }
 
 .screenVal {
@@ -66,4 +70,14 @@ body {
     border: black;
     border-radius: 18px;
     border-style: solid;
+}
+
+.delete {
+    background-color: #f20553;
+}
+
+button {
+    text-decoration: none;
+    border-radius: 12px;
+    border: none;
 }
