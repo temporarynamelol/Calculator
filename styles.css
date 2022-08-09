@@ -105,6 +105,8 @@ button {
     border-style: solid;
     border-color:  	black;
     background-color: #62afb7;
+    font-family: 'Teko-regular';
+    font-size: 22px;
 }
 
 button:hover {
