@@ -1,7 +1,16 @@
+@font-face {
+    font-family: 'FredokaOne';
+    src: url(./fonts/FredokaOne-Regular.ttf);
+}
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.head {
+    font-family: 'FredokaOne';
+    font-size: 120px;
 }
 
 .calcBody {
