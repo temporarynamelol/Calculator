@@ -76,8 +76,14 @@ body {
     background-color: #f20553;
 }
 
+.clear {
+    background-color: #ffec47;
+}
+
 button {
     text-decoration: none;
     border-radius: 12px;
-    border: none;
+    border-style: solid;
+    border-color:  	black;
+    background-color: #62afb7;
 }
