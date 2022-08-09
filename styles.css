@@ -12,6 +12,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0px;
+    background-color: #84E4f7;
 }
 
 .head {
@@ -22,6 +24,8 @@ body {
 
 .calcBody {
     border-radius: 15px;
+    border-style: solid;
+    border-color: black;
     padding: 25px;
     display: flex;
     flex-direction: column-reverse;
