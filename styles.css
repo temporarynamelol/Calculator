@@ -43,7 +43,8 @@ body {
 }
 
 .row button {
-    padding: 25px 35px;
+    height: 66px;
+    width: 77px;
 }
 
 .topRow {
@@ -52,7 +53,8 @@ body {
 }
 
 .topRow button {
-    padding: 25px 65px 25px 65px;
+    height: 66px;
+    width: 168px;
 }
 
 .screenRow {
@@ -84,9 +86,17 @@ body {
 
 }
 
+.delete:hover {
+    background-color: #f3286c;
+}
+
 .clear {
     background-color: #ffec47;
 
+}
+
+.clear:hover {
+    background-color: #ffec47;
 }
 
 button {
@@ -95,4 +105,8 @@ button {
     border-style: solid;
     border-color:  	black;
     background-color: #62afb7;
+}
+
+button:hover {
+    background-color: #65c2cc;
 }
