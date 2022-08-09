@@ -5,11 +5,11 @@ body {
 }
 
 .calcBody {
-    padding: 15px;
+    padding: 20px;
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
-    height: 525px;
+    height: 545px;
     width: 350px;
 
 }
@@ -38,7 +38,7 @@ body {
     justify-content: center;
 }
 .screen {
-    height: 80px;
+    height: 100px;
     width: 350px;
     border-style: solid;
     border-color: black;
@@ -55,6 +55,6 @@ body {
 
 .calcOutline {
     border: black;
-    border-radius: 12px;
+    border-radius: 18px;
     border-style: solid;
 }
